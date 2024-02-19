@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hasil Diagnosa</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        background-color: #f8f9fa;
+      }
+
+      h1 {
+        color: #17a2b8;
+        text-align: center;
+        margin-top: 30px;
+      }
+
+      p {
+        margin-top: 30px;
+        text-align: center;
+      }
+
+      .card {
+        width: 50%;
+        margin: 20px auto;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border: none;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: transform 0.3s;
+      }
+
+      .card:hover {
+        transform: scale(1.02);
+      }
+
+      .card-header {
+        background-color: #17a2b8;
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .card-body {
+        padding: 20px;
+      }
+
+      .table {
+        margin-bottom: 0;
+      }
+
+      .table th, td {
+        padding-left: 10px;
+      }
+
+      .back-button {
+        margin-top: 20px;
+        margin-left: 320px;
+        background-color: rgb(238, 238, 233);
+        border:rgb(176, 176, 37) ;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.357);
+        padding: 10px 20px;
+        color: rgb(5, 4, 4);
+        text-decoration: none;
+        transition: background-color 0.3s;
+      }
+
+      .back-button:hover {
+        background-color: #525354;
+      }
+
+      .error-message {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Diagnosa Penyakit Gigi dan Mulut</h1>
+    <p>Dengan ini kami menyatakan hasil yang Anda dapatkan adalah:</p>
+
+    {% if results %}
+    <div class="card">
+      <div class="card-header">
+        <h3>Hasil Diagnosa</h3>
+      </div>
+      <div class="card-body">
+        <table class="table">
+          <tr>
+            <th>Diagnosis</th>
+            <th>Tingkat Keparahan</th>
+          </tr>
+          {% for result in results %}
+          <tr>
+            <td>{{ result.disease_name }}</td>
+            <td>{{ result.severity }}</td>
+          </tr>
+          {% endfor %}
+        </table>
+      </div>
+    </div>
+    {% else %}
+    <p class="error-message">
+      Tidak ada diagnosis yang sesuai dengan gejala yang Anda alami.
+    </p>
+    {% endif %}
+    <a class="btn btn-primary back-button" href="{{ url_for('index') }}">Kembali ke Formulir</a>
+
+
+    <!-- Menggunakan Bootstrap JS dan Popper.js (diperlukan oleh Bootstrap) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <!-- Menggunakan Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>

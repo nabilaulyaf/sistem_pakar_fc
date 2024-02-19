@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dental Care</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <a href="../images/logo.png" class="logo"
+        ><i class="fas fa-tooth"></i>Diagnosa Penyakit Gigi & Mulut</a
+      >
+      <nav class="navbar">
+        <a href="#facts">Penyakit Gigi</a>
+        <a href="#blog">Blog</a>
+        <a href="#consule">Diagnosa Penyakit</a>
+      </nav>
+      <!-- <a href="#consule" class="btn">Consultation</a>
+        <div id="menu-btn" class="fas fa-bars"></div> -->
+    </header>
+
+    <section class="home" id="home">
+      <div class="content">
+        <p>Welcome</p>
+        <h3>Periksa gigi</h3>
+        <h3>anda disini</h3>
+        <a href="#consule" class="btn">Diagnosa Sekarang!</a>
+      </div>
+    </section>
+
+    <section class="facts" id="facts">
+      <h1 class="heading">Penyakit Gigi</h1>
+      <div class="box-container">
+        <div class="box">
+          <img
+            src="{{ url_for('static', filename='images/gigi1.jpeg') }}"
+            alt=""
+          />
+          <h3>Gingivitis</h3>
+        </div>
+        <div class="box">
+          <img
+            src="{{ url_for('static', filename='images/gigi2.jpeg') }}"
+            alt=""
+          />
+          <h3>Trench Mouth</h3>
+        </div>
+        <div class="box">
+          <img
+            src="{{ url_for('static', filename='images/gigi3.jpg') }}"
+            alt=""
+          />
+          <h3>Karies Gigi</h3>
+        </div>
+        <div class="box">
+          <img
+            src="{{ url_for('static', filename='images/gigi4.jpg') }}"
+            alt=""
+          />
+          <h3>Pulpitis</h3>
+        </div>
+        <div class="box">
+          <img
+            src="{{ url_for('static', filename='images/gigi5.webp') }}"
+            alt=""
+          />
+          <h3>Nekrosis Pulpa</h3>
+        </div>
+        <div class="box">
+          <img
+            src="{{ url_for('static', filename='images/gigi6.jpeg') }}"
+            alt=""
+          />
+          <h3>Periodontitis</h3>
+        </div>
+        <div class="box">
+          <img
+            src="{{ url_for('static', filename='images/gigi7.jpg') }}"
+            alt=""
+          />
+          <h3>Impaksi Gigi</h3>
+        </div>
+        <div class="box">
+          <img
+            src="{{ url_for('static', filename='images/gigi8.jpg') }}"
+            alt=""
+          />
+          <h3>Glositis</h3>
+        </div>
+        <div class="box">
+          <h1>Dan masih banyak penyakit gigi dan mulut lainnya.</h1>
+        </div>
+      </div>
+    </section>
+
+    <section class="blog" id="blog">
+      <h1 class="heading">Blog Gigi</h1>
+      <div class="box-container">
+        <div class="box">
+          <div class="image">
+            <img
+              src="{{ url_for('static', filename='images/3.png') }}"
+              alt=""
+            />
+          </div>
+          <div class="content">
+            <div class="icons">
+              <a href=""><i class="fas fa-calendar"></i>Oktober 2020</a>
+            </div>
+            <h3>Anatomi Gigi: Struktur, Fungsi, Jenis, Perawatan</h3>
+            <p>
+              Mempelajari anatomi gigi dapat membantu anda menjaga kesehatan dan
+              kebersihan gigi.
+            </p>
+            <a
+              href="https://doktersehat.com/informasi/gigi-dan-mulut/anatomi-gigi/"
+              class="btn"
+              >Baca selengkapnya</a
+            >
+          </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img
+              src="{{ url_for('static', filename='images/2.png') }}"
+              alt=""
+            />
+          </div>
+          <div class="content">
+            <div class="icons">
+              <a href=""><i class="fas fa-calendar"></i>Maret 2021</a>
+            </div>
+            <h3>Ketahui 10 Fakta tentang Anatomi Gigi Manusia</h3>
+            <p>
+              Gigi memiliki banyak kegunaan untuk tubuh tubuh manusia. Apa saja
+              fakta-fakta tentang gigi pada manusia?
+            </p>
+            <a
+              href="https://www.halodoc.com/artikel/ketahui-10-fakta-tentang-anatomi-gigi-manusia"
+              class="btn"
+              >Baca selengkapnya</a
+            >
+          </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img
+              src="{{ url_for('static', filename='images/4.png') }}"
+              alt=""
+            />
+          </div>
+          <div class="content">
+            <div class="icons">
+              <a href=""><i class="fas fa-calendar"></i>Maret 2023</a>
+            </div>
+            <h3>Memahami Fungsi Gigi Berdasarkan Jenis-jenisnya</h3>
+            <p>
+              Ada beberapa jenis gigi yang tersusun dalam rongga mulut dengan
+              fungsinya masing-masing.
+            </p>
+            <a
+              href="https://www.alodokter.com/memahami-fungsi-gigi-berdasarkan-jenis-jenisnya"
+              class="btn"
+              >Baca selengkapnya</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="consule" id="consule">
+      <h1 class="heading">Diagnosa Gejala & Penyakit Gigi</h1>
+      <h2 align="justify">
+        Metode yang digunakan dalam penelitian ini yaitu Forward Chaining untuk
+        merepresentasikan Rule atau kaidah dari 27 fakta gejala dan 8 penyakit
+        yang dipaparkan oleh pakar. Hasil dari pengujian terhadap metode ini
+        adalah sebanyak 10 data pasien yang didiagnosa mendapatkan hasil 8 sama
+        dengan analisis dokter sehingga tingkat akurasinya sebesar 80%.
+      </h2>
+      <br /><br /><br />
+      <br />
+      <h2 align="center">
+        Silahkan mengisi gejala yang dirasakan lalu isi 'Ya' jika merasakan dan
+        'Tidak' jika tidak merasakan. Untuk Menentukan penyakit apa yang anda
+        derita.
+      </h2>
+      <br /><br />
+      <div class="form-container">
+        <form action="{{ url_for('diagnose') }}" method="post">
+          <table>
+            <tr>
+              <th class="number-column">No.</th>
+              <th class="gejala-column">Gejala</th>
+              <th>Aksi</th>
+            </tr>
+            {% for key, value in dental_symptoms.items() %}
+            <tr>
+              <td class="number-column">{{ loop.index }}</td>
+              <!-- Add this line for automatic numbering -->
+              <td>{{ value }}</td>
+              <td>
+                <input type="radio" name="{{ key }}" value="y" /> Iya
+                <input type="radio" name="{{ key }}" value="n" /> Tidak
+              </td>
+            </tr>
+            {% endfor %}
+          </table>
+          <br />
+          <input type="submit" value="Diagnosa" />
+        </form>
+      </div>
+    </section>
+    <section class="footer">
+      <p>&copy; 2024 Diagnosa Penyakit Gigi & Mulut. All rights reserved.</p>
+    </section>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
